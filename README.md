@@ -17,7 +17,7 @@ This API includes five endpoints for:
 5- Display one student
 
 ## How to configure StudentAPI?
-In order to configure the StudentAPI, you need to edit application.properties file and enter your url, username, and password. In addition, you should have MySQL Workbench in your system.
+In order to configure the StudentAPI, you need to edit application.properties file and enter your url, username, and password. In addition, you should have MySQL Workbench in your system and create a database with name "student". Then, run the API in Eclipse.
 
 ## How to use StudentAPI?
-First, you should run the API. Then, you can send your request using other tools such as Postman.
+First, you should run the API in an IDE like Eclipse. Then, you can send your request using other tools such as Postman.
