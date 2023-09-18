@@ -41,7 +41,7 @@
               "application/json" : {
                 "schema" : {
                   "type" : "string"
-                },
+                }
               }
             }
           }
@@ -78,7 +78,7 @@
               "application/json" : {
                 "schema" : {
                   "type" : "string"
-                },
+                }
                }
             }
           }
@@ -159,7 +159,7 @@
               "application/json" : {
                 "schema" : {
                   "type" : "string"
-                },
+                }
               }
             }
           }
