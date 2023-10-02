@@ -16,3 +16,4 @@ To configure the StudentAPI, you need to edit the `application.properties` file 
 
 ## How to Use StudentAPI?
 Begin by running the API in an IDE like Eclipse. Then, you can send your requests using tools such as Postman.
+
