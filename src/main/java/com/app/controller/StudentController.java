@@ -50,15 +50,31 @@ public class StudentController {
 	}
 
 	// get one student //////////////////////////////////////////////////////////
+	/*
+	 * @GetMapping("/get/{sid}") 
+	 * public ResponseEntity<Student>
+	 * getOneStudent(@PathVariable Integer sid) { ResponseEntity<Student> response =
+	 * null;
+	 * 
+	 * // call service Student std = service.getStudentById(sid); response = new
+	 * ResponseEntity<Student>(std, HttpStatus.OK);
+	 * 
+	 * return response; }
+	 */
+	
+	// get one student //////////////////////////////////////////////////////////
 	@GetMapping("/get/{sid}")
 	public ResponseEntity<Student> getOneStudent(@PathVariable Integer sid) {
-		ResponseEntity<Student> response = null;
+	    ResponseEntity<Student> response = null;
 
-		// call service
-		Student std = service.getStudentById(sid);
-		response = new ResponseEntity<Student>(std, HttpStatus.OK);
+	    try {
+	        Student std = service.getStudentById(sid);
+	        response = new ResponseEntity<Student>(std, HttpStatus.OK);
+	    } catch (RuntimeException e) {
+	        response = new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+	    }
 
-		return response;
+	    return response;
 	}
 
 	// update student //////////////////////////////////////////////////////////
