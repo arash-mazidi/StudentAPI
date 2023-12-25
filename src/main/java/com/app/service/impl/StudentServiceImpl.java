@@ -45,7 +45,11 @@ public class StudentServiceImpl implements IStudentService {
 
 	@Override
 	public void updateStudent(Student std) {
-		repo.save(std);
-
+	    if (repo.existsById(std.getStudentId())) {
+	        repo.save(std);
+	    } else {
+	        // Handle the case where the student doesn't exist
+	        throw new RuntimeException("Student not found with ID: " + std.getStudentId());
+	    }
 	}
 }
